@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Upload</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css')}}">
 </head>
 <body>
     <div class="main">
@@ -20,9 +20,7 @@
                 <div id="progressBar" class="progressline" style="width: 0%"></div>
             </div>
             <div>
-                <button type="submit"
-                    class="object">Upload
-                    File</button>
+                <button type="submit" class="object">Upload File</button>
             </div>
         </form>
     </div>
@@ -39,7 +37,6 @@
                         select.appendChild(option);
                     });
                 });
-    
             document.getElementById('uploadForm').onsubmit = function(event) {
                 event.preventDefault();
                 const formData = new FormData(this);
@@ -52,7 +49,6 @@
                         document.getElementById('progressBar').style.width = percentComplete + '%';
                     }
                 };
-    
                 xhr.onload = function() {
                     if (xhr.status == 200) {
                         alert('File uploaded successfully');
@@ -62,12 +58,10 @@
                     }
                     document.getElementById('progressBarBackground').style.display = "none";
                 };
-    
                 xhr.onerror = function() {
                     alert('Upload error');
                     document.getElementById('progressBarBackground').style.display = "none";
                 };
-    
                 xhr.send(formData);
             };
         });
