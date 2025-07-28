@@ -1,4 +1,4 @@
-# jellyfin-uploader
+# MJU (M-Unity's Jellyfin Uploader)
 A simple, easy-to-use and self-hosted jellyfin media uploader straight to your jellyfin volume folders.
 Upload media from anywhere on your device or from other devices on your network or you can expose it and upload media from anywhere in the world (Not recommended, unless you know what you're doing).
 
@@ -6,7 +6,7 @@ Upload media from anywhere on your device or from other devices on your network 
 
 - Upload videos straight to jellyfin volume
 - Selecting which folder inside the jellyfin volume do you want to save (movies, series, courses, etc)
-- Uploading progres bar
+- Uploading progress bar
 
 ## 🔧 How to Install
 
@@ -15,17 +15,17 @@ Requirements:
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### Basic
-- To run the jellyfin uploader on top of docker just clone the repo and deploy it with docker-compose as follows:
+- To run the MJU on top of docker just clone the repo and deploy it with docker-compose as follows:
     ```bash
-        git clone https://github.com/Osama-Yusuf/jellyfin-uploader.git
-        cd jellyfin-uploader
+        git clone https://github.com/M-UnityDev/MJU.git
+        cd MJU
         docker-compose up -d --build
     ```
-- To run the jellyfin uploader without docker, using your host python to run it do the following steps:
+- To run the MJU without docker, using your host python to run it do the following steps:
     ```bash
-        git clone https://github.com/Osama-Yusuf/jellyfin-uploader.git
-        cd jellyfin-uploader
+        git clone https://github.com/M-UnityDev/MJU.git
+        cd MJU
         RUN pip3 install --no-cache-dir -r requirements.txt
         flask run # Or python3 app.py 
     ```
-jellyfin-uploader is now running on http://localhost:5005
+MJU is now running on http://localhost:5005
